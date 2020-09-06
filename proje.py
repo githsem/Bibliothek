@@ -59,7 +59,7 @@ while True:
             time.sleep(2)
             kutuphane.kitap_sil(isim)
             print("Kitap Silindi...")
-            
+
     elif (islem == "5"):
         isim = input("HAngi Kitabin Baskisini Yukseltmek Istiyorsunuz : ")
         print("Baski Yukseltiliyor...")
