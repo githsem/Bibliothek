@@ -41,10 +41,31 @@ while True:
         yazar = input("Yazar : ")
         yayinevi = input("Yayinevi : ")
         tur = input("Tur : ")
-        baski =
+        baski = int(input("Baski : "))
+
+        yeni_kitap = Kitap(isim,yazar,yayinevi,tur,baski)
+
+        print("Kitap Ekleniyor...")
+        time.sleep(2)
+
+        kutuphane.kitap_ekle(yeni_kitap)
+        print("Kitap Eklendi...")
+
     elif (islem == "4"):
-        pass
+        isim = input("Hangi Kitabi Silmek Istiyorsunuz")
+        cevap = input("Emin misiniz? (E/H)")
+        if (cevap == "E"):
+            print("Kitap Siliniyor...")
+            time.sleep(2)
+            kutuphane.kitap_sil(isim)
+            print("Kitap Silindi...")
+
     elif (islem == "5"):
-        pass
+        isim = input("HAngi Kitabin Baskisini Yukseltmek Istiyorsunuz : ")
+        print("Baski Yukseltiliyor...")
+        time.sleep(2)
+        kutuphane.baski_yukselt(isim)
+        print("Baski Yukseltildi...")
+
     else:
         print("Gecersiz Islem")
