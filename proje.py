@@ -27,4 +27,11 @@ while True:
         print("Program Sonlandiriliyor")
         print("Yine Bekleriz")
         break
-    elif (islem == "1")
+    elif (islem == "1"):
+
+    elif (islem == "2"):
+    elif (islem == "3"):
+    elif (islem == "4"):
+    elif (islem == "5"):
+    else:
+        print("Gecersiz Islem")
