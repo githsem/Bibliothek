@@ -49,6 +49,8 @@ while True:
         time.sleep(2)
 
         kutuphane.kitap_ekle(yeni_kitap)
+        print("Kitap Eklendi...")
+        
     elif (islem == "4"):
         pass
     elif (islem == "5"):
