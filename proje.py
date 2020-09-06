@@ -41,7 +41,14 @@ while True:
         yazar = input("Yazar : ")
         yayinevi = input("Yayinevi : ")
         tur = input("Tur : ")
-        baski =
+        baski = int(input("Baski : "))
+
+        yeni_kitap = Kitap(isim,yazar,yayinevi,tur,baski)
+
+        print("Kitap Ekleniyor...")
+        time.sleep(2)
+
+        kutuphane.kitap_ekle(yeni_kitap)
     elif (islem == "4"):
         pass
     elif (islem == "5"):
