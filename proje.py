@@ -50,9 +50,15 @@ while True:
 
         kutuphane.kitap_ekle(yeni_kitap)
         print("Kitap Eklendi...")
-        
+
     elif (islem == "4"):
-        pass
+        isim = input("Hangi Kitabi Silmek Istiyorsunuz")
+        cevap = input("Emin misiniz? (E/H)")
+        if (cevap == "E"):
+            print("Kitap Siliniyor...")
+            time.sleep(2)
+            kutuphane.kitap_sil(isim)
+            print("Kitap Silindi...")
     elif (islem == "5"):
         pass
     else:
