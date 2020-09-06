@@ -62,13 +62,13 @@ class Kutuphane():
     def kitap_sil(self,isim):
         sorgu = "DELETE FROM kitaplar WHERE isim = ?"
 
-        self.cursor.execute((sorgu,(isim,)))
+        self.cursor.execute(sorgu,(isim,))
         self.baglanti.commit()
 
     def baski_yukselt(self,isim):
-        sorgu = "SELECT * FROM Kitaplar WHERE isim + ?"
+        sorgu = "SELECT * FROM Kitaplar WHERE isim = ?"
 
-        self.cursor.execute((sorgu,(isim,)))
+        self.cursor.execute(sorgu,(isim,))
         kitaplar = self.cursor.fetchall()
 
         if(len(kitaplar) == 0):
