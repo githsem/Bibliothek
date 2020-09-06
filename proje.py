@@ -52,8 +52,8 @@ while True:
         print("Kitap Eklendi...")
 
     elif (islem == "4"):
-        isim = input("Hangi Kitabi Silmek Istiyorsunuz")
-        cevap = input("Emin misiniz? (E/H)")
+        isim = input("Hangi Kitabi Silmek Istiyorsunuz : ")
+        cevap = input("Emin misiniz? (E/H) : ")
         if (cevap == "E"):
             print("Kitap Siliniyor...")
             time.sleep(2)
@@ -61,7 +61,7 @@ while True:
             print("Kitap Silindi...")
 
     elif (islem == "5"):
-        isim = input("HAngi Kitabin Baskisini Yukseltmek Istiyorsunuz : ")
+        isim = input("Hangi Kitabin Baskisini Yukseltmek Istiyorsunuz : ")
         print("Baski Yukseltiliyor...")
         time.sleep(2)
         kutuphane.baski_yukselt(isim)
