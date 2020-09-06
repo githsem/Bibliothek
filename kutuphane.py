@@ -21,6 +21,7 @@ class Kutuphane():
         self.cursor = self.baglanti.cursor()
 
         sorgu = "CREATE TABLE IF NOT EXISTS kitaplar(isim TEXT,yazar TEXT,yayinevi TEXT,tur TEXT,baski INT)"
+
         self.cursor.execute(sorgu)
         self.baglanti.commit()
 
@@ -29,6 +30,7 @@ class Kutuphane():
 
     def kitaplari_goster(self):
         sorgu = "SELECT * FROM kitaplar"
+
         self.cursor.execute(sorgu)
         kitaplar = self.cursor.fetchall()
 
@@ -41,6 +43,7 @@ class Kutuphane():
 
     def kitap_sorgula(self,isim):
         sorgu = "SELECT * FROM kitaplar WHERE isim = ?"
+
         self.cursor.execute(sorgu,(isim,))
         kitaplar = self.cursor.fetchall()
 
@@ -52,11 +55,13 @@ class Kutuphane():
 
     def kitap_ekle(self,kitap):
         sorgu = "INSERT INTO kitaplar VALUES(?,?,?,?,?)"
+
         self.cursor.execute(sorgu,(kitap.isim,kitap.yazar,kitap.yayinevi,kitap.tur,kitap.baski))
         self.baglanti.commit()
 
     def kitap_sil(self,isim):
         sorgu = "DELETE FROM kitaplar WHERE isim = ?"
+
         self.cursor.execute((sorgu,(isim,)))
         self.baglanti.commit()
 
