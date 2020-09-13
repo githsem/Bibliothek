@@ -36,7 +36,7 @@ class Kutuphane():
         self.cursor.execute(sorgu)
         kitaplar = self.cursor.fetchall()
 
-        if(len(kitaplar) ==0 ):
+        if len(kitaplar) == 0:
             print("Kutuphanede Kitap Bulunmuyor")
         else:
             for i in kitaplar:
