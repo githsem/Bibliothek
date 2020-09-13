@@ -78,10 +78,6 @@ class Kutuphane():
         else:
             baski = kitaplar[0][4]
             baski += 1
-            sorgu2="UPDATE kitaplar SET  baski = ? WHERE isim = ?"
-            self.cursor.execute(sorgu2,(baski,isim))
+            sorgu2 = "UPDATE kitaplar SET  baski = ? WHERE isim = ?"
+            self.cursor.execute(sorgu2, (baski, isim))
             self.baglanti.commit()
-
-
-
-
