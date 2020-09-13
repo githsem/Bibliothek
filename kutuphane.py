@@ -40,19 +40,19 @@ class Kutuphane():
             print("Kutuphanede Kitap Bulunmuyor")
         else:
             for i in kitaplar:
-                kitap = Kitap(i[0],i[1],i[2],i[3],i[4])
+                kitap = Kitap(i[0], i[1], i[2], i[3], i[4])
                 print(kitap)
 
-    def kitap_sorgula(self,isim):
+    def kitap_sorgula(self, isim):
         sorgu = "SELECT * FROM kitaplar WHERE isim = ?"
 
-        self.cursor.execute(sorgu,(isim,))
+        self.cursor.execute(sorgu, (isim,))
         kitaplar = self.cursor.fetchall()
 
         if (len(kitaplar) == 0):
             print("Boyle bir Kitap Bulunmuyor")
-        else :
-            kitap = Kitap(kitaplar[0][0],kitaplar[0][1],kitaplar[0][2],kitaplar[0][3],kitaplar[0][4],)
+        else:
+            kitap = Kitap(kitaplar[0][0], kitaplar[0][1], kitaplar[0][2], kitaplar[0][3], kitaplar[0][4],)
             print(kitap)
 
     def kitap_ekle(self,kitap):
