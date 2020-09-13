@@ -58,19 +58,19 @@ class Kutuphane():
     def kitap_ekle(self, kitap):
         sorgu = "INSERT INTO kitaplar VALUES(?,?,?,?,?)"
 
-        self.cursor.execute(sorgu,(kitap.isim, kitap.yazar, kitap.yayinevi, kitap.tur, kitap.baski))
+        self.cursor.execute(sorgu, (kitap.isim, kitap.yazar, kitap.yayinevi, kitap.tur, kitap.baski))
         self.baglanti.commit()
 
-    def kitap_sil(self,isim):
+    def kitap_sil(self, isim):
         sorgu = "DELETE FROM kitaplar WHERE isim = ?"
 
-        self.cursor.execute(sorgu,(isim,))
+        self.cursor.execute(sorgu, (isim,))
         self.baglanti.commit()
 
-    def baski_yukselt(self,isim):
+    def baski_yukselt(self, isim):
         sorgu = "SELECT * FROM Kitaplar WHERE isim = ?"
 
-        self.cursor.execute(sorgu,(isim,))
+        self.cursor.execute(sorgu, (isim,))
         kitaplar = self.cursor.fetchall()
 
         if(len(kitaplar) == 0):
