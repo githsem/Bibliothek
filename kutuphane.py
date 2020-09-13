@@ -13,6 +13,7 @@ class Kitap():
     def __str__(self):
         return "Kitap Ismi : {}\nYazar : {}\nYayinevi : {}\nTur : {}\nBaski : {}\n".format(self.isim, self.yazar, self.yayinevi, self.tur, self.baski)
 
+
 class Kutuphane():
     def __init__(self):
         self.baglanti_olustur()
@@ -35,7 +36,7 @@ class Kutuphane():
         self.cursor.execute(sorgu)
         kitaplar = self.cursor.fetchall()
 
-        if(len(kitaplar)==0):
+        if(len(kitaplar) ==0 ):
             print("Kutuphanede Kitap Bulunmuyor")
         else:
             for i in kitaplar:
