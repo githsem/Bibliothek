@@ -43,7 +43,7 @@ while True:
         tur = input("Tur : ")
         baski = int(input("Baski : "))
 
-        yeni_kitap = Kitap(isim,yazar,yayinevi,tur,baski)
+        yeni_kitap = Kitap(isim, yazar, yayinevi, tur, baski)
 
         print("Kitap Ekleniyor...")
         time.sleep(2)
